@@ -15,12 +15,12 @@ export default defineNuxtConfig({
 	modules: ["@nuxtjs/tailwindcss"],
 
 	tailwindcss: {
-		cssPath: ["~/assets/css/tailwind.css", { injectPosition: "first" }],
+		cssPath: "~/assets/css/tailwind.css",
 		configPath: "tailwind.config",
-		exposeConfig: false,
-		exposeLevel: 2,
-		config: {},
-		injectPosition: "first",
+		exposeConfig: true,
+		config: {
+			content: ["content/**/**.md"],
+		},
 		viewer: true,
 	},
 });
